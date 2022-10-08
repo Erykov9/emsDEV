@@ -1,0 +1,54 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  opacity: 0.6;
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .arrow {
+      span {
+        color: $primary-color;
+        border-bottom: 3px solid $primary-color;
+        cursor: pointer;
+      }
+    }
+    
+    .list {
+      list-style: none;  
+      cursor: pointer;
+
+      li {
+        float: left;
+        padding-left: 15px;
+      }
+
+      li:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .root {
+    .accordion-header {
+      display: none;
+    }
+
+    h2 {
+      display: none;
+    }
+
+    .footer {
+      justify-content: center;
+    }
+  }
+
+}
